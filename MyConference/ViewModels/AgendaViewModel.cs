@@ -26,6 +26,13 @@ public partial class AgendaViewModel : ObservableObject
         for (int i = 0; i < sessioncount.Length; i++)
             AddItems(sessioncount[i], i);
 
+        var sorted = from session in sessions
+                     orderby session.Start
+                     group session by session.StartTimeDisplay into sessionGroup
+                     select new Grouping<string, Session>(sessionGroup.Key, sessionGroup);
+
+        Agenda.AddRange(sorted);
+
         return Task.CompletedTask;
 
         void AddItems(int count)
