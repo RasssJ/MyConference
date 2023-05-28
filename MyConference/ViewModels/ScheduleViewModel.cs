@@ -52,18 +52,3 @@ public partial class ScheduleViewModel : ObservableObject
         }
     }
 }
-
-public class ScheduleDay1ViewModel : ScheduleViewModel
-{
-    public ScheduleDay1ViewModel()
-    {
-        Day = 1;
-    }
-}
-public class ScheduleDay2ViewModel : ScheduleViewModel
-{
-    public ScheduleDay2ViewModel()
-    {
-        Day = 2;
-    }
-}

@@ -1,4 +1,7 @@
-﻿namespace MyConference;
+﻿using MyConference.Pages;
+using MyConference.ViewModels;
+
+namespace MyConference;
 
 public static class MauiProgram
 {
@@ -13,6 +16,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+        builder.Services.AddTransient<SchedulePage>();
+        builder.Services.AddTransient<ScheduleViewModel>();
+
+        return builder.Build();
 	}
 }
