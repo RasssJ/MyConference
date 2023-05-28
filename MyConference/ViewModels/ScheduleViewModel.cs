@@ -6,12 +6,12 @@ using static Jeffsum.Goldblum;
 
 namespace MyConference.ViewModels;
 
-public partial class AgendaViewModel : ObservableObject
+public partial class ScheduleViewModel : ObservableObject
 {
     public int Day { get; set; }
-    public ObservableRangeCollection<Grouping<string, Session>> Agenda { get; } = new();
+    public ObservableRangeCollection<Grouping<string, Session>> Schedule { get; } = new();
     Random random = new ();
-    public AgendaViewModel() 
+    public ScheduleViewModel() 
     {
     
     }
@@ -31,7 +31,7 @@ public partial class AgendaViewModel : ObservableObject
                      group session by session.StartTimeDisplay into sessionGroup
                      select new Grouping<string, Session>(sessionGroup.Key, sessionGroup);
 
-        Agenda.AddRange(sorted);
+        Schedule.AddRange(sorted);
 
         return Task.CompletedTask;
 
@@ -53,16 +53,16 @@ public partial class AgendaViewModel : ObservableObject
     }
 }
 
-public class AgendaDay1ViewModel : AgendaViewModel
+public class ScheduleDay1ViewModel : ScheduleViewModel
 {
-    public AgendaDay1ViewModel()
+    public ScheduleDay1ViewModel()
     {
         Day = 1;
     }
 }
-public class AgendaDay2ViewModel : AgendaViewModel
+public class ScheduleDay2ViewModel : ScheduleViewModel
 {
-    public AgendaDay2ViewModel()
+    public ScheduleDay2ViewModel()
     {
         Day = 2;
     }
