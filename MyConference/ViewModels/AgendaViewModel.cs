@@ -52,3 +52,18 @@ public partial class AgendaViewModel : ObservableObject
         }
     }
 }
+
+public class AgendaDay1ViewModel : AgendaViewModel
+{
+    public AgendaDay1ViewModel()
+    {
+        Day = 1;
+    }
+}
+public class AgendaDay2ViewModel : AgendaViewModel
+{
+    public AgendaDay2ViewModel()
+    {
+        Day = 2;
+    }
+}
