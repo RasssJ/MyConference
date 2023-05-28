@@ -6,9 +6,34 @@
     xmlns:local="clr-namespace:MyConference"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Schedule">
+            <ShellContent
+                Title="Day 1"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="ScheduleDay1" />
+            <ShellContent
+                Title="Day 2"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="ScheduleDay2" />
+        </Tab>
+        <Tab Title="My Agenda">
+            <ShellContent
+                Title="Day 1"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MyAgendaDay1" />
 
+            <ShellContent
+                Title="Day 2"
+                ContentTemplate="{DataTemplate  local:MainPage}"
+                Route="MyAgendaDay2" />
+        </Tab>
+        <Tab Title="Sponsors">
+            <ShellContent
+                Title="Sponsors"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="Sponsors" />
+        </Tab>
+    </TabBar>
+    
 </Shell>
