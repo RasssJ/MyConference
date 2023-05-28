@@ -1,24 +1,16 @@
 using MyConference.ViewModels;
 
 namespace MyConference.Pages;
-
-[QueryProperty(nameof(Day), nameof(Day))]
 public partial class SchedulePage : ContentPage
 {
 	readonly ScheduleViewModel vm;
-	int day;
-	public int Day 
-	{
-		get => day;
-		set
-		{
-			day = value;
-			vm.Day = day;
-		}
-	}
+    public static int day { get; set; }
     public SchedulePage(ScheduleViewModel vm)
 	{
 		InitializeComponent();
+
+        Day++;
+        vm.Day = Day;
 
 		BindingContext = this.vm = vm;
 

@@ -11,11 +11,11 @@
             <ShellContent
                 Title="Day 1"
                 ContentTemplate="{DataTemplate pages: SchedulePage}"
-                Route="ScheduleDay1?Day=1" />
+                Route="ScheduleDay1" />
             <ShellContent
                 Title="Day 2"
                 ContentTemplate="{DataTemplate pages: SchedulePage}"
-                Route="ScheduleDay2?Day=2" />
+                Route="ScheduleDay2" />
         </Tab>
         <Tab Title="My Agenda" Icon="tab_agenda.png">
             <ShellContent
