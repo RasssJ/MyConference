@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using MvvmHelpers;
-using ObservableObject = CommunityToolkit.Mvvm.ComponentModel.ObservableObject
+﻿using MvvmHelpers;
 
  namespace MyConference.ViewModels;
 
