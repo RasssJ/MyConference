@@ -50,6 +50,9 @@
 
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Resources\layout\tabbar.xml" />
+	  <None Remove="Resources\Images\tab_agenda.svg" />
+	  <None Remove="Resources\Images\tab_schedule.svg" />
+	  <None Remove="Resources\Images\tab_sponsors.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
