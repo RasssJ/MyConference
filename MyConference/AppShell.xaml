@@ -10,28 +10,28 @@
         <Tab Title="Schedule">
             <ShellContent
                 Title="Day 1"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:ScheduleDay1Page}"
                 Route="ScheduleDay1" />
             <ShellContent
                 Title="Day 2"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:ScheduleDay2Page}"
                 Route="ScheduleDay2" />
         </Tab>
         <Tab Title="My Agenda">
             <ShellContent
                 Title="Day 1"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:AgendaPage}"
                 Route="MyAgendaDay1" />
 
             <ShellContent
                 Title="Day 2"
-                ContentTemplate="{DataTemplate  local:MainPage}"
+                ContentTemplate="{DataTemplate  pages:AgendaPage}"
                 Route="MyAgendaDay2" />
         </Tab>
         <Tab Title="Sponsors">
             <ShellContent
                 Title="Sponsors"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:SponsorsPage}"
                 Route="Sponsors" />
         </Tab>
     </TabBar>
