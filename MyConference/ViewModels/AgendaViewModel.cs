@@ -1,8 +1,21 @@
-﻿using MvvmHelpers;
+﻿using CommunityToolkit.Mvvm.Input;
+using MvvmHelpers;
+using MyConference.Models;
 
- namespace MyConference.ViewModels;
+namespace MyConference.ViewModels;
 
-public class AgendaViewModel : ObservableObject
+public partial class AgendaViewModel : ObservableObject
 {
-    public ObservableRangeCollection<>
+    public ObservableRangeCollection<Grouping<string, Session>> Agenda { get; } = new();
+
+    public AgendaViewModel() 
+    {
+    
+    }
+
+    [RelayCommand]
+    Task LoadDataAsync()
+    {
+        return Task.CompletedTask;
+    }
 }
